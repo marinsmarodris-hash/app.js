@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo do Número Secreto</title>
+</head>
+<body>
+  <h1>Jogo do Número Secreto</h1>
+  <script>
+    alert('Boas-vindas ao jogo do Número Secreto');
+    let numeroSecreto = 30;
+    let tentativas = 5;
+    let acertou = false;
+
+    while (tentativas > 0 && !acertou) {
+        let chute = prompt('Escolha um número entre 1 e 50. Tentativas restantes: ' + tentativas);
+        if (chute == numeroSecreto) {
+            alert('Parabéns! Você acertou o número secreto!');
+            acertou = true;
+        } else {
+            tentativas--;
+            if (tentativas > 0) {
+                alert('Você errou. Tente novamente!');
+            }
+        }
+    }
+
+    if (!acertou) {
+        alert('Suas tentativas acabaram. O número secreto era ' + numeroSecreto + '.');
+    }
+  </script>
+</body>
+</html>
